@@ -15,6 +15,8 @@
 #include "sysfsvoice.h"
 #include "iomatrixcreator.h"
 #include "iomatrixvoice.h"
+#include "iogpiomatrixcreator.h"
+#include "iogpiomatrixvoice.h"
 #include "utilities.h"
 
 extern char *optarg;
@@ -114,6 +116,18 @@ int  getIO( std::auto_ptr<IOBase> *io, struct cable_t * cable, char const *dev,
       res = io->get()->Init(cable, serial, use_freq);
   }
 #endif /*USE_WIRINGPI*/
+  else if(cable->cabletype == CABLE_GPIOD_CREATOR)
+  {
+      io->reset(new IOGPIOMatrixCreator());
+      io->get()->setVerbose(verbose);
+      res = io->get()->Init(cable, serial, use_freq);
+  }
+    else if(cable->cabletype == CABLE_GPIOD_VOICE)
+  {
+      io->reset(new IOGPIOMatrixVoice());
+      io->get()->setVerbose(verbose);
+      res = io->get()->Init(cable, serial, use_freq);
+  }
   else
   {
       fprintf(stderr, "Unknown Cable \"%s\" \n", getCableName(cable->cabletype));
@@ -132,6 +146,8 @@ const char *getCableName(int type)
     case CABLE_SYSFS_GPIO_CREATOR: return "sysfsgpio_creator"; break;
     case CABLE_SYSFS_GPIO_VOICE: return "sysfsgpio_voice"; break;
     case CABLE_UNKNOWN: return "unknown"; break;
+    case CABLE_GPIOD_CREATOR: return "gpiod_creator"; break;
+    case CABLE_GPIOD_VOICE: return "gpiod_voice"; break;
     default:
         return "Unknown";
     }
