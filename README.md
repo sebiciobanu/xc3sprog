@@ -1,6 +1,6 @@
 # Raspberry Pi specific fork
 
-This fork repurposed this project and replaced obsolete librarary sysfs, and p` as it was not working reliably enough to program without frequent mismatch errors or validation errors.
+This fork repurposed this project and replaced obsolete librarary sysfs, and wiringpi as it was not working reliably enough to program without frequent mismatch errors or validation errors.
 
 ## Installation
 This project has been tested on Raspberry Pi 4 with Bullseye 32-bit and Bookworm 32-bit and 64-bit.
