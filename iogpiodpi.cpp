@@ -127,17 +127,17 @@ void IOGPIODPi::tx_tms(unsigned char *pat, int length, int force)
 
 void IOGPIODPi::tx(bool tms, bool tdi)
 {
-     gpiod_line_set_value(TCKline, 0);
+    gpiod_line_set_value(TCKline, 0);
 
-   if(tdi)
-    gpiod_line_set_value(TDIline, 1);
-   else
-    gpiod_line_set_value(TDIline, 0);
+    if(tdi)
+        gpiod_line_set_value(TDIline, 1);
+    else
+        gpiod_line_set_value(TDIline, 0);
 
-   if(tms)
-    gpiod_line_set_value(TMSline, 1);
+    if(tms)
+        gpiod_line_set_value(TMSline, 1);
    else
-    gpiod_line_set_value(TMSline, 0);
+        gpiod_line_set_value(TMSline, 0);
 
     gpiod_line_set_value(TCKline, 1);
 }
