@@ -35,7 +35,7 @@ sudo xc3sprog -c gpiod_creator -j
 
 ## Programming
 ```
-xc3sprog -c gpio_creator -v -p {chain poistion eg. 0} {filename}.jed
+xc3sprog -c gpiod_creator -v -p {chain poistion eg. 0} {filename}.jed
 ```
 
 ---
