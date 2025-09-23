@@ -2,6 +2,7 @@
 #
 # Once done this will define
 #
+
 #  LIBUSB_FOUND - system has libusb
 #  LIBUSB_INCLUDE_DIR - the libusb include directory
 #  LIBUSB_LIBRARIES - Link these to use libusb
