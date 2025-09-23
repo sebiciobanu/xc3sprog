@@ -157,7 +157,7 @@ CABLES_TYPES CableDB::getCableType(const char *given_name)
     return CABLE_XPC;
   if (strcasecmp(given_name, "gpiod_creator") == 0)
     return CABLE_GPIOD_CREATOR;
-    if (strcasecmp(given_name, "gpiod_voice") == 0)
+  else if (strcasecmp(given_name, "gpiod_voice") == 0)
     return CABLE_GPIOD_VOICE;
 
   return CABLE_UNKNOWN;

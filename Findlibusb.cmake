@@ -18,15 +18,16 @@ if (NOT LIBUSB_FOUND)
 
     if(NOT WIN32)
         include(FindPkgConfig)
-        pkg_check_modules(LIBUSB_PKG libusb)
+        pkg_check_modules(LIBUSB_PKG libusb-1.0)
     endif(NOT WIN32)
 
     find_path(LIBUSB_INCLUDE_DIR
         NAMES
-            usb.h
+            libusb.h
         HINTS
             ${LIBUSB_PKG_INCLUDE_DIRS}
         PATHS
+            /usr/include/libusb-1.0
             /usr/include
             /usr/local/include
     )
@@ -38,7 +39,7 @@ if (NOT LIBUSB_FOUND)
 
     find_library(LIBUSB_LIBRARIES
         NAMES
-            usb
+            usb-1.0
         HINTS
             ${LIBUSB_PKG_LIBRARY_DIRS}
         PATHS
@@ -61,8 +62,8 @@ if (NOT LIBUSB_FOUND)
         add_library(libusb SHARED IMPORTED)
     endif(USE_STATIC_USB)
 
-    set_target_properties(libusb PROPERTIES IMPORTED_LOCATION ${LIBUSB_LIBRARIES})
-    set(${LIBUSB_LIBRARIES} libusb)
+    set_target_properties(libusb PROPERTIES IMPORTED_LOCATION "${LIBUSB_LIBRARIES}")
+    set(LIBUSB_LIBRARIES libusb)
 
     #mark_as_advanced(LIBUSB_INCLUDE_DIR LIBUSB_LIBRARIES)
 

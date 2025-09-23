@@ -187,10 +187,10 @@ int IOFtdi::Init(struct cable_t *cable, const char *serial, unsigned int freq)
                       ftdi_get_error_string(ftdi_handle));
               goto ftdi_fail;
           }
-          res = ftdi_usb_purge_buffers(ftdi_handle);
+          res = ftdi_tcioflush(ftdi_handle);
           if(res < 0)
           {
-              fprintf(stderr, "ftdi_usb_purge_buffers: %s",
+              fprintf(stderr, "ftdi_tcioflush: %s",
                       ftdi_get_error_string(ftdi_handle));
               goto ftdi_fail;
          }
