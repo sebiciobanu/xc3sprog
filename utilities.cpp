@@ -38,8 +38,8 @@ void detect_chain(Jtag *jtag, DeviceDB *db)
     }
 }
 
-int  getIO( std::auto_ptr<IOBase> *io, struct cable_t * cable, char const *dev, 
-            char const *serial, bool verbose, bool use_ftd2xx, 
+int  getIO( std::unique_ptr<IOBase> *io, struct cable_t * cable, char const *dev,
+            char const *serial, bool verbose, bool use_ftd2xx,
             unsigned int freq)
 {
     int res = 1;

@@ -130,9 +130,10 @@ int ProgAlgXC95X::flow_array_program(JedecFile &file)
   gettimeofday(tv, NULL);
   for(sec=0;sec < MaxSector;sec++)
     {
-    if(jtag->getVerbose())
+    if(jtag->getVerbose()) {
       fprintf(stderr, "                            \r"
 	      "Programming Sector %3d", sec);
+    }
       preamble[0]= 0x01;
       for(l=0;l<3;l++){
 	for(m=0;m<5;m++){
@@ -180,8 +181,9 @@ int ProgAlgXC95X::flow_array_program(JedecFile &file)
 		      fprintf(stderr, ".");
 		      fflush(stderr);
 		    }
-		  if ((o_data[0] & 0x03) == 0x01)
+		  if ((o_data[0] & 0x03) == 0x01) {
 		    break;
+        }
 		}
 	      if (k == 32)
 		{
