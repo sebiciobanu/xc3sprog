@@ -109,6 +109,9 @@ set (LIBUSRP_INCLUDE_DIR "fallback/")
 include_directories(${LIBUSRP_INCLUDE_DIR})
 
 
+find_package(gpiod)
+include_directories(${gpiod_INCLUDE_DIRS})
+
 include_directories(${CMAKE_SOURCE_DIR})
 
 #add_executable(debug debug.cpp iobase.cpp ioparport.cpp iodebug.cpp)
@@ -140,20 +143,18 @@ add_library(xc3sproglib  STATIC iogpiomatrixcreator.cpp iogpiomatrixvoice.cpp io
                         ${CONDITIONAL_FILES} devices.h cables.h)
 
 
-set(GPIO_LIBS ${GPIO_LIBS} gpiod)
-
 add_executable(xc2c_warp xc2c_warp.cpp)
-target_link_libraries(xc2c_warp xc3sproglib ${CONDITIONAL_LIBS} ${GPIO_LIBS})
+target_link_libraries(xc2c_warp xc3sproglib ${CONDITIONAL_LIBS} ${gpiod_LIBRARIES})
 
 add_executable(detectchain detectchain.cpp cables.h devices.h)
-target_link_libraries(detectchain xc3sproglib ${LIBFTDI_LIBRARIES} ${LIBFTD2XX_LIBRARIES} ${CONDITIONAL_LIBS} ${GPIO_LIBS})
+target_link_libraries(detectchain xc3sproglib ${LIBFTDI_LIBRARIES} ${LIBFTD2XX_LIBRARIES} ${CONDITIONAL_LIBS} ${gpiod_LIBRARIES})
 
 add_executable(xc3sprog xc3sprog.cpp javr.cpp srecfile.cpp progalgavr.cpp 
 			devices.h)
-target_link_libraries(xc3sprog xc3sproglib ${LIBFTDI_LIBRARIES}  ${LIBFTD2XX_LIBRARIES} ${CONDITIONAL_LIBS}  ${GPIO_LIBS})
+target_link_libraries(xc3sprog xc3sproglib ${LIBFTDI_LIBRARIES}  ${LIBFTD2XX_LIBRARIES} ${CONDITIONAL_LIBS}  ${gpiod_LIBRARIES})
 
 add_executable(readdna readdna.cpp devices.h)
-target_link_libraries(readdna xc3sproglib ${LIBFTDI_LIBRARIES}  ${LIBFTD2XX_LIBRARIES} ${CONDITIONAL_LIBS}  ${GPIO_LIBS})
+target_link_libraries(readdna xc3sproglib ${LIBFTDI_LIBRARIES}  ${LIBFTD2XX_LIBRARIES} ${CONDITIONAL_LIBS}  ${gpiod_LIBRARIES})
 
 
 
