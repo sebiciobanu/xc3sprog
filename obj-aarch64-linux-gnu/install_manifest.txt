@@ -1,0 +1,7 @@
+/usr/bin/xc3sprog
+/usr/bin/xc2c_warp
+/usr/bin/readdna
+/usr/bin/bitparse
+/usr/bin/jedecparse
+/usr/bin/srecparse
+/usr/bin/detectchain

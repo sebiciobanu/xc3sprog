@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+bd88f31fcab4d97bdf248443af70e972 cables.h
+bf5f9c263e394637015a2bb143734eb7 devices.h

@@ -1,0 +1,14 @@
+Package: matrixio-xc3sprog
+Version: 1.1.1.003
+Architecture: arm64
+Maintainer: MATRIX Labs <info@matrix.one>
+Installed-Size: 1077
+Depends: libc6 (>= 2.34), libftdi1-2 (>= 1.5), libgcc-s1 (>= 3.0), libgpiod2 (>= 1.1), libstdc++6 (>= 11), libusb-0.1-4 (>= 2:0.1.12), wiringpi
+Conflicts: xc3sprog
+Replaces: xc3sprog
+Section: embedded
+Priority: optional
+Homepage: https://github.com/matrix-io/xc3sprog
+Description: Spartan3, XCF and CPLD JTAG programmer and other utilities.
+ Spartan3, XCF and CPLD JTAG programmer and other utilities.
+ Used to program the FPGA of the MATRIX Creator via Raspberry Pi.

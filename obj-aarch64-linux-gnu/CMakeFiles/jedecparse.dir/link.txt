@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wall -Wl,-z,relro -rdynamic CMakeFiles/jedecparse.dir/jedecparse.cpp.o CMakeFiles/jedecparse.dir/jedecfile.cpp.o -o jedecparse 

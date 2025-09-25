@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wall -Wl,-z,relro -rdynamic CMakeFiles/xc2c_warp.dir/xc2c_warp.cpp.o -o xc2c_warp  libxc3sproglib.a -lusb -lgpiod 

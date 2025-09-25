@@ -1,0 +1,3 @@
+shlibs:Depends=libc6 (>= 2.34), libftdi1-2 (>= 1.5), libgcc-s1 (>= 3.0), libgpiod2 (>= 1.1), libstdc++6 (>= 11), libusb-0.1-4 (>= 2:0.1.12)
+misc:Depends=
+misc:Pre-Depends=

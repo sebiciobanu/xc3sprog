@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wall -Wl,-z,relro -rdynamic CMakeFiles/detectchain.dir/detectchain.cpp.o -o detectchain  libxc3sproglib.a -lftdi1 -lusb -lgpiod 

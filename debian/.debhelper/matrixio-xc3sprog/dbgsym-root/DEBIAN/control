@@ -1,0 +1,12 @@
+Package: matrixio-xc3sprog-dbgsym
+Source: matrixio-xc3sprog
+Version: 1.1.1.003
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: MATRIX Labs <info@matrix.one>
+Installed-Size: 1428
+Depends: matrixio-xc3sprog (= 1.1.1.003)
+Section: debug
+Priority: optional
+Description: debug symbols for matrixio-xc3sprog
+Build-Ids: 0806366c5b901b1600b03292d9798cdb0824f062 44f4c615caa15ad7326f51a74af43c9c53632fe4 6bfa03e8e3622718476f4bab51506b480ffea5e6 a2fb2e693afe5efde05c22a39f5d0c45813e28fb bac87b7fb3652a8152aaabd2b0900bb43285363a e4f8d7aea25d63080dfceb321fb4e7a34cadb652 eb8835428516687628d0e8f9d284759ef64325ce

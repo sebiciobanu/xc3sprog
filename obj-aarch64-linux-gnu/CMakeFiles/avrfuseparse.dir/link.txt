@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wall -Wl,-z,relro -rdynamic CMakeFiles/avrfuseparse.dir/avrfuseparse.cpp.o CMakeFiles/avrfuseparse.dir/avrfusefile.cpp.o -o avrfuseparse 

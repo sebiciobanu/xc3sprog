@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wall -Wl,-z,relro -rdynamic CMakeFiles/srecparse.dir/srecparse.cpp.o CMakeFiles/srecparse.dir/srecfile.cpp.o -o srecparse 

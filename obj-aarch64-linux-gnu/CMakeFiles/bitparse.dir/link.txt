@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wall -Wl,-z,relro -rdynamic CMakeFiles/bitparse.dir/bitrev.cpp.o CMakeFiles/bitparse.dir/bitfile.cpp.o CMakeFiles/bitparse.dir/bitparse.cpp.o -o bitparse 
